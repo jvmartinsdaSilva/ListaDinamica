@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --corDeFundo: #222;
+    --corPadrao: #f5f5f5;
+    --corDestaque: #1e90ff;
+}
+
+body{
+    background: var(--corDeFundo);
+}
+
+div.minhaLista {
+    margin: 50px auto;
+    width: 350px;
+    min-height: 500px;
+    height: auto;
+    border: 2px solid var(--corPadrao);
+    border-radius: 5px;
+}
+
+div.menu{
+    display: block;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    height: 100px;
+}
+
+div.menu h1{
+    font: Bold 1.7rem cursive;
+    text-align: center;
+    color: var(--corPadrao);
+}
+
+div.menu button.Adicionar{
+    display: block;
+    padding: 5px;
+    margin: 20px auto;
+    font: 600 20px arial;
+    background: var(--corDeFundo);
+    color: var(--corPadrao);
+    border: 1px solid var(--corPadrao);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.menu button.Adicionar:hover{
+    background: var(--corPadrao);
+    color: var(--corDeFundo);
+}
+
+div.menu input{
+    display: inline-block;
+    width: 250px;
+    height: 20px;
+    background: var(--corDeFundo);
+    color: var(--corPadrao);
+    border: 1px solid var(--corPadrao);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+div.menu button.pesquisa{
+    margin-left: 10px;
+    background: none;
+    border: none;
+    transform: scale(1.45);
+    cursor: pointer;
+}
+
+div.menu button:active{
+    transform: scale(0.95);
+}
+
+ul.Lista{
+    margin: 60px 7px;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+ul.Lista li{
+    display: block ;
+    margin: 10px;
+    color: white;
+    height: auto;
+    border: 1px solid var(--corPadrao);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+li.itemLista span.nomeItem{
+    display: block;
+    font: 600 1.3rem cursive;
+    color: var(--corDestaque);
+}
+
+li.itemLista span.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.itemLista span.itemListaTXT{
+    display: inline-block;
+    font: normal 16px arial;
+    width: 240px;
+    margin: 5px;
+    word-wrap: break-word;
+}
+
+li.itemLista button.editar{
+    background: none;
+    border: none;
+    transform: scale(2) rotate(140deg);
+    color: var(--corPadrao);
+    cursor: pointer;
+    margin-left: -15px;
+}
+
+li.itemLista button.apagar{
+    background: none;
+    width: auto;
+    height: auto;
+    border: none;
+    transform: scale(2);
+    color: var(--corPadrao);
+    cursor: pointer;
+    margin-left: -10px;
+    margin-top: -5px;
+}
+
+li.itemLista button.editar:active{
+    transform: scale(0.95) rotate(140deg);
+}
+li.itemLista button.apagar:active{
+    transform: scale(0.95);
+}
+
+
+div.centralDeTarefas{
+    margin: 50px auto;
+    width: 500px;
+    height: 250px;
+    border: 1px solid var(--corPadrao);
+    border-radius: 5px;
+    background: var(--corDeFundo);
+    
+}
+
+div.centralDeTarefas button.Fechar{
+    margin-left: 477px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+div.centralDeTarefas button.Fechar:active{
+    transform: scale(0.9);
+}
+
+div.centralDeTarefas span.NT{
+    display: block;
+    font: bold 18px arial;
+    color: var(--corDestaque);
+    margin:5px;
+    margin-left: 15px;
+}
+
+div.centralDeTarefas span.DT{
+    display: block;
+    font: bold 18px arial;
+    color: var(--corPadrao);
+    margin:5px;
+    margin-left: 15px;
+}
+
+div.centralDeTarefas input.nomeTarefa{
+    display: block;
+    margin: 15px;
+    width: 250px;
+    padding: 5px;
+    background: var(--corDeFundo);
+    border: 1px solid var(--corPadrao);
+    color: var(--corDestaque);
+    font: normal 17px arial;
+}
+
+div.centralDeTarefas input.descricaoTarefa{
+    display: block;
+    margin: 15px;
+    width: 250px;
+    padding: 5px;
+    background: var(--corDeFundo);
+    border: 1px solid var(--corPadrao);
+    color: var(--corPadrao);
+    font: normal 17px arial;
+}
+
+div.centralDeTarefas button.confirmar{
+    display: block;
+    font: bold 1.2rem Arial;
+    width: 100px;
+    height: 30px;
+    margin: 30px auto;
+    border: 1px solid var(--corDestaque);
+    background: var(--corDestaque);
+    color: var(--corDeFundo);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.centralDeTarefas button.confirmar:hover{
+    background: var(--corDeFundo);
+    color: var(--corDestaque);
+}
+
+div.centralDeTarefas button.confirmar:active{
+    transform: scale(0.9);
+}
+
+div.protetorDeTela{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;;
+}
+
+@media (min-width: 200px) and (max-width:399px){
+    div.centralDeTarefas{
+        transform: scale(0.62);
+        margin: 50px -85px;
+        
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px){
+    div.centralDeTarefas{
+        transform: scale(0.75);
+        margin: 50px -50px;
+    }
+}
+
+

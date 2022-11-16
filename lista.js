@@ -136,12 +136,15 @@ class Lista {
     }
 
     pesquisar(){
-        if(itemPesquisa.value == ''){
+        let Pesquisa = itemPesquisa.value.toLowerCase()
+
+        if(Pesquisa.value == ''){
             this.listaNaTela()
+            
         } else {
             minhaLista.innerHTML = ''
             for(let i = 0; i < this.arrayLista.length; i++){
-                if(this.arrayLista[i].nome.toLowerCase() == itemPesquisa.value.toLowerCase()){
+                if(this.arrayLista[i].nome.toLowerCase().indexOf(Pesquisa) != -1){
                     let li = document.createElement('li')
                     li.classList.add('itemLista')
                     minhaLista.appendChild(li)

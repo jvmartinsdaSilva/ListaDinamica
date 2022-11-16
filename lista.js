@@ -141,7 +141,7 @@ class Lista {
         } else {
             minhaLista.innerHTML = ''
             for(let i = 0; i < this.arrayLista.length; i++){
-                if(this.arrayLista[i].nome == itemPesquisa.value){
+                if(this.arrayLista[i].nome.toLowerCase() == itemPesquisa.value.toLowerCase()){
                     let li = document.createElement('li')
                     li.classList.add('itemLista')
                     minhaLista.appendChild(li)
